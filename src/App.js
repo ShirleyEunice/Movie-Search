@@ -7,9 +7,9 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   const searchMovie = async () => {
-    if (!title)
+    if (!title.trim()){
       return;
-      // Fixing the API URL by using backticks (``) for template literals
+    }
       const API = `http://www.omdbapi.com/?s=${title}&apikey=dff6f08c`;
       try {
         const response = await axios.get(API);
