@@ -10,7 +10,7 @@ function App() {
     if (!title.trim()){
       return;
     }
-      const API = `http://www.omdbapi.com/?s=${title}&apikey=dff6f08c`;
+      const API = `https://www.omdbapi.com/?s=${title}&apikey=dff6f08c`;
       try {
         const response = await axios.get(API);
         // Update the movies state
